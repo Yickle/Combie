@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="theme-color" content="#202020" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>회원가입</title>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <link href="dark.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>회원가입</h1>
+            <h2>
+                회원가입하면
+                <a href="#" onclick="showAgg(); return false;">이용 약관</a>에 동의한 것으로 간주됩니다.
+            </h2>
+            <form onsubmit="return false;">
+                <input id="usrNm" type="text" placeholder="이름" />
+                <input id="pw" type="password" placeholder="비밀번호" />
+                <input id="pwRe" type="password" placeholder="비밀번호 확인" />
+                <button onclick="signup();">회원가입</button>
+                <button onclick="location.href = './index.html';" style="margin: 10px 0 0 0">취소</button>
+            </form>
+        </div>
+
+        <script src="sweetalert2.min.js"></script>
+        <script src="signup.js"></script>
+    </body>
+</html>

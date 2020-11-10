@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#202020" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link href="dark.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>로그인</h1>
+      <h2>시작하려면 로그인하세요.</h2>
+      <form onsubmit="return login();">
+        <input name="usrNm" id="usrNm" type="text" placeholder="이름" />
+        <input name="pw" id="pw" type="password" placeholder="비밀번호" />
+        <input type="submit" value="로그인" />
+        <button onclick="location.href = './signup.html'; return false;" style="margin: 10px 0 0 0">회원가입</button>
+        <div class="save">
+          <input id="save" type="checkbox" />
+          <label for="save">자동 로그인</label>
+        </div>
+      </form>
+    </div>
+
+    <script src="sweetalert2.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

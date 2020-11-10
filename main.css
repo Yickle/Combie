@@ -1,0 +1,247 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  background-color: rgb(32, 32, 32);
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px 0 4px;
+  background-color: rgb(185, 185, 185);
+  border-radius: 50%;
+  display: inline-block;
+  
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 0 10px 10px;
+  margin: 0;
+  width: 100%;
+  background-color: transparent;
+
+  transition: background-color 0.1s linear;
+}
+
+.top h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 15px 0 0 15px;
+  display: inline-block;
+}
+
+.top .refresh {
+  margin: 5px 0 5px 15px;
+  display: block;
+}
+
+.top .refresh h2 {
+  color: rgb(185, 185, 185);
+  font-size: 13px;
+  font-weight: 300;
+  display: inline;
+}
+
+.refresh {
+  cursor: pointer;
+  width: 130px;
+  display: inline-block;
+}
+
+.color h2{
+  animation: refreshTxt 0.75s linear;
+}
+
+.color span{
+  animation: refreshSpan 0.75s linear;
+}
+
+.setting {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  float: right;
+  margin: 20px 30px 0 0;
+  top: 0;
+}
+
+.setting .settingIco {
+  fill: rgb(255, 255, 255);
+  width: 32px;
+  height: 32px;
+}
+
+.setting:hover .settingIco {
+  fill: rgb(110, 110, 110);
+}
+
+@keyframes refreshTxt {
+  0% {
+    color: rgb(69, 185, 24);
+  }
+  100% {
+    color: rgb(185, 185, 185);
+  }
+}
+
+@keyframes refreshSpan {
+  0% {
+    background-color: rgb(69, 185, 24);
+  }
+  100% {
+    background-color: rgb(185, 185, 185);
+  }
+}
+
+.container {
+  padding: 150px 0 0 0;
+  text-align: center;
+}
+
+.intro {
+  margin: 0 0 60px 0;
+}
+
+.intro h1 {
+  color: white;
+  font-size: min(5vw, 40px);
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.intro h2 {
+  color: white;
+  font-size: min(3.5vw, 20px);
+  font-weight: 300;
+  margin: -10px 0 0 0;
+}
+
+.thisWeek {
+  max-width: 1000px;
+  margin: 100px auto;
+}
+
+#selDay {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  display: block;
+  color: rgb(211, 211, 211);
+  padding: 0 5px 0 5px;
+  height: 35px;
+  background-color: transparent;
+  border: rgb(71, 71, 71) solid 2px;
+}
+
+#selDay:hover {
+  border: rgb(184, 184, 184) solid 2px;
+}
+
+#selDay:focus {
+  color: rgb(0, 0, 0);
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(0, 113, 189);
+}
+
+.timeTable {
+  width: 100%;
+  background-color: rgb(49, 49, 49);
+  border-collapse: collapse;
+  margin: 10px 0 0 0;
+}
+
+.timeTable td{
+  border: 0.5px solid rgb(110, 110, 110);
+  height: 5px;
+}
+
+.timeTable .white{
+  background-color: rgb(184, 184, 184);
+}
+.timeTable .red{
+  background-color: #f44336;
+}
+.timeTable .orange{
+  background-color: #ff9800;
+}
+.timeTable .yellow{
+  background-color: #ffeb3b;
+}
+.timeTable .green{
+  background-color: #4caf50;
+}
+.timeTable .blue{
+  background-color: #2196f3;
+}
+.timeTable .purple{
+  background-color: #a569bd;
+}
+
+label {
+  font-size: 12px;
+  font-family: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+  color: #666;
+  font-weight: bold;
+  user-select: none;
+}
+
+
+[data-tooltip-text]:hover {
+	position: relative;
+}
+
+[data-tooltip-text]:hover:after {
+	background-color: #000000;
+	background-color: rgba(0, 0, 0, 0.8);
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	color: #FFFFFF;
+  font-size: 12px;
+  text-align: left;
+	content: attr(data-tooltip-text);
+
+  margin-bottom: 10px;
+	top: 130%;
+	left: 0;    
+	padding: 7px 12px;
+	position: absolute;
+	width: auto;
+	min-width: 50px;
+	max-width: 300px;
+	word-wrap: break-word;
+}

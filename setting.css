@@ -1,0 +1,91 @@
+select:hover {
+    border: rgb(184, 184, 184) solid 2px;
+}
+
+select:focus {
+    color: rgb(0, 0, 0);
+    outline: none;
+    border-color: rgb(0, 113, 189);
+}
+
+.settingDiv {
+    padding: 20px 30px 0px 30px;
+    margin: 40px 10px 0 10px;
+    vertical-align: top;
+    width: 450px;
+    height: 500px;
+    display: inline-block;
+    border: rgb(71, 71, 71) 1px solid;
+    background-color: rgb(39, 39, 39);
+}
+
+.settingDiv label {
+    display: block;
+    color: rgb(172, 172, 172);
+    margin: 0 0 10px 0;
+}
+
+.settingDiv svg {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px 0 0;
+    display: inline-block;
+    fill: white;
+}
+
+#refreshBtn {
+    width: 13px;
+    height: 13px;
+    margin: 0 0 0 5px;
+    fill: white;
+}
+
+#refreshBtn:hover {
+    fill: rgb(184, 184, 184);
+}
+
+#refreshBtn.spin {
+    animation: spin 0.75s;
+}
+
+@keyframes spin {
+    100% {
+         -webkit-transform: rotate(360deg); transform:rotate(360deg);
+    }
+}
+
+.settingDiv button {
+    margin: 20px 0 30px 0;
+}
+
+.settingDiv p {
+    color: white;
+    margin: 0 20px 0 0;
+}
+
+.container h2 {
+    font-weight: 400;
+    display: inline-block;
+}
+
+.container h3 {
+    margin: 0 0 50px 0;
+    font-size: 15px;
+    font-weight: 200;
+    color: white;
+    display: block;
+}
+
+.settingDiv select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    display: inline-block;
+    color: rgb(211, 211, 211);
+    padding: 0 5px 0 5px;
+    height: 200px;
+    background-color: transparent;
+    border: rgb(71, 71, 71) solid 2px;
+    width: 200px;
+}

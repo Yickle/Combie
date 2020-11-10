@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  user-select: none;
+}
+
+body {
+  background-color: rgb(32, 32, 32);
+}
+
+.container {
+  text-align: center;
+}
+
+.container h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: 500;
+  margin: 100px 0 0 0;
+}
+
+.container h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.container form {
+  margin: 0 auto; 
+  width: 300px;
+}
+
+.container input[type='text'],
+.container input[type='password'] {
+  color: rgb(211, 211, 211);
+  padding: 0 5px 0 5px;
+  margin: 0 0 5px 0;
+  width: 90%;
+  height: 35px;
+  background-color: transparent;
+  border: rgb(71, 71, 71) solid 2px;
+}
+
+.container input[type='text']:hover,
+.container input[type='password']:hover {
+  border: rgb(184, 184, 184) solid 2px;
+}
+
+.container input[type='text']:focus,
+.container input[type='password']:focus {
+  color: rgb(0, 0, 0);
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(0, 113, 189);
+}
+
+.container input[type='submit'],
+button {
+  width: 100%;
+  padding: 8px 60px 8px 60px;
+  margin: 20px 0 0 0;
+  border: none;
+  background-color: rgb(71, 71, 71);
+  color: rgb(255, 255, 255);
+  border: rgb(71, 71, 71) solid 2px;
+}
+
+.container input[type='submit']:hover,
+button:hover {
+  border: rgb(184, 184, 184) solid 2px;
+}
+
+.container input[type='submit']:focus,
+button:focus {
+  outline: none;
+  background-color: rgb(184, 184, 184);
+  border: rgb(184, 184, 184) solid 2px;
+}
+
+.container .save{
+  text-align: left;
+  padding: 7px 0 7px 0;
+}
+
+.container .save label{
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+}
+
+a {
+  color: white;
+}

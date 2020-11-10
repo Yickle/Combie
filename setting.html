@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="theme-color" content="#202020" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>설정</title>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <link rel="stylesheet" type="text/css" href="setting.css" />
+        <link href="dark.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>설정</h1>
+            <div class="settingDiv">
+                <div>
+                    <svg viewbox="-10 -60 512 512">
+                        <g>
+                            <g>
+                                <path
+                                    d="M492,236H144.262c-11.046,0-20,8.954-20,20s8.954,20,20,20H492c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z"
+                                />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path
+                                    d="M492,86H144.262c-11.046,0-20,8.954-20,20s8.954,20,20,20H492c11.046,0,20-8.954,20-20S503.046,86,492,86z"
+                                />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path
+                                    d="M492,386H144.262c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20H492c11.046,0,20-8.954,20-20C512,394.954,503.046,386,492,386z"
+                                />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <circle cx="27" cy="106" r="27" />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <circle cx="27" cy="256" r="27" />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <circle cx="27" cy="406" r="27" />
+                            </g>
+                        </g>
+                    </svg>
+                    <h2>앱 목록 설정</h2>
+                    <h3>통계에 포함시킬 앱을 선택합니다.</h3>
+                </div>
+                <div style="display: inline-block; width: 200px">
+                    <div>
+                        <label for="selApp" style="display: inline-block">실행 중인 앱 목록</label>
+                        <svg id="refreshBtn" viewbox="0 0 341.333 341.333" onclick="getRunnPs();">
+                            <g>
+                                <path
+                                    d="M341.227,149.333V0l-50.133,50.133C260.267,19.2,217.707,0,170.56,0C76.267,0,0.107,76.373,0.107,170.667
+                                    s76.16,170.667,170.453,170.667c79.467,0,146.027-54.4,164.907-128h-44.373c-17.6,49.707-64.747,85.333-120.533,85.333
+                                    c-70.72,0-128-57.28-128-128s57.28-128,128-128c35.307,0,66.987,14.72,90.133,37.867l-68.8,68.8H341.227z"
+                                />
+                            </g>
+                        </svg>
+                    </div>
+                    <select id="selApp" size="5"></select>
+                    <button onclick="addPs();" style="width: 100%">추가</button>
+                </div>
+                <div style="display: inline-block; width: 200px">
+                    <label for="currApp">등록된 앱 목록</label>
+                    <select id="currApp" size="5"></select>
+                    <button onclick="removePs();" style="width: 100%">삭제</button>
+                </div>
+            </div>
+            <div class="settingDiv">
+                <div>
+                    <svg viewbox="-10 -60 512 512">
+                        <g>
+                            <path
+                                d="M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148
+                                C404,66.393,337.607,0,256,0S108,66.393,108,148c0,50.548,25.479,95.251,64.262,121.962
+                                c-36.21,12.495-69.398,33.136-97.281,61.018C26.629,379.333,0,443.62,0,512h40c0-119.103,96.897-216,216-216s216,96.897,216,216
+                                h40C512,443.62,485.371,379.333,437.02,330.98z M256,256c-59.551,0-108-48.448-108-108S196.449,40,256,40
+                                c59.551,0,108,48.448,108,108S315.551,256,256,256z"
+                            />
+                        </g>
+                    </svg>
+                    <h2>계정 설정</h2>
+                    <h3>현재 로그인한 계정을 관리합니다.</h3>
+                    <div>
+                        <p>다른 계정을 이용하고 싶으신가요?</p>
+                        <button onclick="logout();">로그아웃</button>
+                    </div>
+                    <div>
+                        <p>서비스를 더 이상 사용하고 싶지 않으신가요?</p>
+                        <button onclick="deleteAcc();">탈퇴하기</button>
+                    </div>
+                    <div>
+                        <p>부팅 시 앱을 자동으로 실행할까요?</p>
+                        <button onclick="startOnBoot();">설정하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="sweetalert2.min.js"></script>
+        <script src="setting.js"></script>
+    </body>
+</html>
